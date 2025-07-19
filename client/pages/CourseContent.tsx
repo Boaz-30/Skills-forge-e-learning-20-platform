@@ -266,6 +266,60 @@ export default function CourseContent() {
     }
   }, [courseId, isLoaded, isSignedIn]);
 
+  // Show loading state while Clerk is loading
+  if (!isLoaded) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <Card className="max-w-md w-full text-center">
+          <CardHeader>
+            <CardTitle>Loading...</CardTitle>
+            <CardDescription>
+              Please wait while we load your account information.
+            </CardDescription>
+          </CardHeader>
+        </Card>
+      </div>
+    );
+  }
+
+  // Show login requirement if user is not signed in
+  if (!isSignedIn) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <Card className="max-w-md w-full text-center">
+          <CardHeader>
+            <div className="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
+              <Lock className="w-8 h-8 text-orange-600" />
+            </div>
+            <CardTitle>Login Required</CardTitle>
+            <CardDescription>
+              You need to be logged in to access course content.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <Alert>
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription>
+                Please sign in to your account to continue learning and access
+                your enrolled courses.
+              </AlertDescription>
+            </Alert>
+            <div className="space-y-2">
+              <Link to="/sign-in">
+                <Button className="w-full brand-gradient">Sign In</Button>
+              </Link>
+              <Link to="/sign-up">
+                <Button variant="outline" className="w-full">
+                  Create Account
+                </Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
   if (!courseId || !courseData[courseId]) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
