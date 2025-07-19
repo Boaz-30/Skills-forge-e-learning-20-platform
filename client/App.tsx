@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/test" element={<Test />} />
 
         {/* Authentication Routes */}
         <Route
