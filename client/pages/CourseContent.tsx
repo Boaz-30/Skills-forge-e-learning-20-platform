@@ -201,6 +201,35 @@ const courseData: { [key: string]: any } = {
       },
     ],
   },
+  "4": {
+    id: 4,
+    title: "PostgreSQL Database Design & Optimization",
+    instructor: "Emma Thompson",
+    instructorTitle: "Database Architect at Amazon",
+    duration: "6 weeks",
+    totalLessons: 34,
+    completedLessons: 0,
+    rating: 4.7,
+    students: 1200,
+    description:
+      "Master database design, complex queries, indexing, and performance optimization for enterprise applications",
+    modules: [
+      {
+        id: 1,
+        title: "Database Fundamentals",
+        lessons: [
+          {
+            id: 1,
+            title: "Introduction to PostgreSQL",
+            duration: "15:30",
+            type: "video",
+            completed: false,
+            preview: true,
+          },
+        ],
+      },
+    ],
+  },
 };
 
 export default function CourseContent() {
