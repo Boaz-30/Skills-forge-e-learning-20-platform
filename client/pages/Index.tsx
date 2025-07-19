@@ -1,6 +1,19 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+
+// Conditionally import Clerk components
+let SignedIn: any, SignedOut: any, UserButton: any;
+try {
+  const clerk = require("@clerk/clerk-react");
+  SignedIn = clerk.SignedIn;
+  SignedOut = clerk.SignedOut;
+  UserButton = clerk.UserButton;
+} catch (error) {
+  // Fallback components when Clerk is not available
+  SignedIn = ({ children }: { children: React.ReactNode }) => null;
+  SignedOut = ({ children }: { children: React.ReactNode }) => <>{children}</>;
+  UserButton = () => null;
+}
 import {
   Card,
   CardContent,
