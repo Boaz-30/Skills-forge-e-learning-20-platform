@@ -188,8 +188,10 @@ export default function Dashboard() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Button variant="ghost">Profile</Button>
-              <Button variant="outline">Log Out</Button>
+              <span className="text-sm text-muted-foreground">
+                Welcome, {user?.firstName || "User"}!
+              </span>
+              <UserButton afterSignOutUrl="/" />
             </div>
           </div>
         </div>
