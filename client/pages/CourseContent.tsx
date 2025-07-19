@@ -310,14 +310,14 @@ export default function CourseContent() {
               </AlertDescription>
             </Alert>
             <div className="space-y-2">
-              <Link to="/sign-in">
+              <SignInButton mode="modal">
                 <Button className="w-full brand-gradient">Sign In</Button>
-              </Link>
-              <Link to="/sign-up">
+              </SignInButton>
+              <SignUpButton mode="modal">
                 <Button variant="outline" className="w-full">
                   Create Account
                 </Button>
-              </Link>
+              </SignUpButton>
             </div>
           </CardContent>
         </Card>
