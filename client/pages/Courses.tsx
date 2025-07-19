@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import {
   SignedIn,
   SignedOut,
+  SignInButton,
+  SignUpButton,
   UserButton,
   useAuth,
   useUser,
