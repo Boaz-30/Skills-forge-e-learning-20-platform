@@ -501,12 +501,12 @@ export default function Pricing() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/register">
+            <Link to="/sign-up">
               <Button size="lg" className="brand-gradient text-lg px-8">
                 Start Free Trial
               </Button>
             </Link>
-            <Link to="/contact">
+            <Link to="/contact-sales">
               <Button size="lg" variant="outline" className="text-lg px-8">
                 Contact Sales
               </Button>
