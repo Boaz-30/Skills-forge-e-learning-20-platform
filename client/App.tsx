@@ -21,15 +21,7 @@ function App() {
         <Route path="/register" element={<Register />} />
 
         {/* User Dashboard */}
-        <Route
-          path="/dashboard"
-          element={
-            <PlaceholderPage
-              title="Dashboard"
-              description="View your enrolled courses, track progress, and manage your learning journey."
-            />
-          }
-        />
+        <Route path="/dashboard" element={<Dashboard />} />
 
         {/* Admin Routes */}
         <Route
