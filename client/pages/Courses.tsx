@@ -316,7 +316,11 @@ const categories = [
 
 const levels = ["All Levels", "Beginner", "Intermediate", "Advanced"];
 
+// Mock enrollment status - In a real app, this would come from your backend/auth system
+const mockUserEnrollments = [1, 3, 5]; // User is enrolled in courses 1, 3, and 5
+
 export default function Courses() {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [selectedLevel, setSelectedLevel] = useState("All Levels");
