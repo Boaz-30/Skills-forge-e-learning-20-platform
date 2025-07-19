@@ -141,12 +141,12 @@ export default function Index() {
 
             <div className="flex items-center space-x-4">
               <SignedOut>
-                <Link to="/sign-in">
+                <SignInButton mode="modal">
                   <Button variant="ghost">Log In</Button>
-                </Link>
-                <Link to="/sign-up">
+                </SignInButton>
+                <SignUpButton mode="modal">
                   <Button className="brand-gradient">Get Started</Button>
-                </Link>
+                </SignUpButton>
               </SignedOut>
               <SignedIn>
                 <Link to="/dashboard">
