@@ -20,8 +20,12 @@ function App() {
         <Route path="/course/:courseId" element={<CourseContent />} />
 
         {/* Authentication Routes */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/sign-in/*" element={<ClerkSignIn />} />
+        <Route path="/sign-up/*" element={<ClerkSignUp />} />
+
+        {/* Legacy routes for backward compatibility */}
+        <Route path="/login" element={<ClerkSignIn />} />
+        <Route path="/register" element={<ClerkSignUp />} />
 
         {/* User Dashboard */}
         <Route path="/dashboard" element={<Dashboard />} />
