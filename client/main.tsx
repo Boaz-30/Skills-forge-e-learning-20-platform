@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { ClerkProvider } from "@clerk/clerk-react";
 import App from "./App.tsx";
+import ClerkDevNotice from "./components/ClerkDevNotice.tsx";
 import "./global.css";
 
 // Import your Clerk publishable key
