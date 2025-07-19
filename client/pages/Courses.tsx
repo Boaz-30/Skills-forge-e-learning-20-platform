@@ -562,7 +562,21 @@ export default function Courses() {
                           </span>
                         )}
                       </div>
-                      <Button className="brand-gradient">Enroll Now</Button>
+                      {mockUserEnrollments.includes(course.id) ? (
+                        <Link to={`/course/${course.id}`}>
+                          <Button className="brand-gradient">
+                            <BookOpen className="w-4 h-4 mr-2" />
+                            Continue Learning
+                          </Button>
+                        </Link>
+                      ) : (
+                        <Button
+                          className="brand-gradient"
+                          onClick={() => navigate("/pricing")}
+                        >
+                          Enroll Now
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </CardContent>
