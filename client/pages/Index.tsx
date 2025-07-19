@@ -230,13 +230,15 @@ export default function Index() {
                     <span className="text-sm text-muted-foreground">
                       {category.courses} courses
                     </span>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="group-hover:translate-x-1 transition-transform"
-                    >
-                      <ArrowRight className="w-4 h-4" />
-                    </Button>
+                    <Link to="/courses">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="group-hover:translate-x-1 transition-transform"
+                      >
+                        <ArrowRight className="w-4 h-4" />
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
