@@ -134,9 +134,9 @@ export default function Dashboard() {
             Please sign in to access your learning dashboard.
           </p>
           <div className="space-y-2">
-            <Link to="/sign-in">
+            <SignInButton mode="modal">
               <Button className="w-full brand-gradient">Sign In</Button>
-            </Link>
+            </SignInButton>
             <Link to="/">
               <Button variant="outline" className="w-full">
                 Back to Home
