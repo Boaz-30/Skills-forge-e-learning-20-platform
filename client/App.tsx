@@ -17,33 +17,7 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/course/:courseId" element={<CourseContent />} />
 
-        {/* Authentication Routes */}
-        <Route path="/sign-in/*" element={<ClerkSignIn />} />
-        <Route path="/sign-up/*" element={<ClerkSignUp />} />
-
-        {/* Legacy routes for backward compatibility */}
-        <Route path="/login" element={<ClerkSignIn />} />
-        <Route path="/register" element={<ClerkSignUp />} />
-
-        {/* Fallback auth for development without Clerk */}
-        <Route
-          path="/sign-in-fallback"
-          element={
-            <PlaceholderPage
-              title="Sign In"
-              description="Clerk authentication is not configured. Please set up your Clerk keys to enable login functionality."
-            />
-          }
-        />
-        <Route
-          path="/sign-up-fallback"
-          element={
-            <PlaceholderPage
-              title="Create Account"
-              description="Clerk authentication is not configured. Please set up your Clerk keys to enable registration functionality."
-            />
-          }
-        />
+        {/* Authentication is handled via Clerk modal components */}
 
         {/* User Dashboard */}
         <Route path="/dashboard" element={<Dashboard />} />
