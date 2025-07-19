@@ -579,19 +579,28 @@ export default function Courses() {
                           </span>
                         )}
                       </div>
-                      {mockUserEnrollments.includes(course.id) ? (
-                        <Link to={`/course/${course.id}`}>
-                          <Button className="brand-gradient">
-                            <BookOpen className="w-4 h-4 mr-2" />
-                            Continue Learning
+                      {isSignedIn ? (
+                        mockUserEnrollments.includes(course.id) ? (
+                          <Link to={`/course/${course.id}`}>
+                            <Button className="brand-gradient">
+                              <BookOpen className="w-4 h-4 mr-2" />
+                              Continue Learning
+                            </Button>
+                          </Link>
+                        ) : (
+                          <Button
+                            className="brand-gradient"
+                            onClick={() => navigate("/pricing")}
+                          >
+                            Enroll Now
                           </Button>
-                        </Link>
+                        )
                       ) : (
                         <Button
                           className="brand-gradient"
-                          onClick={() => navigate("/pricing")}
+                          onClick={() => navigate("/sign-in")}
                         >
-                          Enroll Now
+                          Sign In to Enroll
                         </Button>
                       )}
                     </div>
