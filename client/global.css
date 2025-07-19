@@ -114,3 +114,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .brand-gradient {
+    @apply bg-gradient-to-r from-brand-primary to-brand-secondary;
+  }
+
+  .brand-gradient-text {
+    @apply bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent;
+  }
+
+  .hero-pattern {
+    background-image:
+      radial-gradient(
+        at 40% 20%,
+        hsl(var(--brand-primary)) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 80% 0%,
+        hsl(var(--brand-secondary)) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 0% 50%, hsl(var(--brand-primary)) 0px, transparent 50%);
+  }
+}
