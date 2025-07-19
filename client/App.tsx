@@ -17,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/course/:courseId" element={<CourseContent />} />
 
         {/* Authentication Routes */}
         <Route path="/login" element={<Login />} />
