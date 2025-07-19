@@ -16,24 +16,8 @@ function App() {
         <Route path="/courses" element={<Courses />} />
 
         {/* Authentication Routes */}
-        <Route
-          path="/login"
-          element={
-            <PlaceholderPage
-              title="Login"
-              description="Sign in to your SkillForge account to access your courses and track your progress."
-            />
-          }
-        />
-        <Route
-          path="/register"
-          element={
-            <PlaceholderPage
-              title="Create Account"
-              description="Join SkillForge today and start your journey to mastering modern tech skills."
-            />
-          }
-        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
         {/* User Dashboard */}
         <Route
@@ -105,24 +89,8 @@ function App() {
         />
 
         {/* Company Pages */}
-        <Route
-          path="/about"
-          element={
-            <PlaceholderPage
-              title="About SkillForge"
-              description="Learn about our mission to empower developers with cutting-edge skills and knowledge."
-            />
-          }
-        />
-        <Route
-          path="/pricing"
-          element={
-            <PlaceholderPage
-              title="Pricing Plans"
-              description="Choose the perfect plan for your learning journey with flexible pricing options."
-            />
-          }
-        />
+        <Route path="/about" element={<About />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route
           path="/contact"
           element={
