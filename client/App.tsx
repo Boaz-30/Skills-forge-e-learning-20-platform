@@ -87,15 +87,8 @@ function App() {
         {/* Company Pages */}
         <Route path="/about" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
-        <Route
-          path="/contact"
-          element={
-            <PlaceholderPage
-              title="Contact Us"
-              description="Get in touch with our team for support, partnerships, or general inquiries."
-            />
-          }
-        />
+        <Route path="/contact" element={<ContactSales />} />
+        <Route path="/contact-sales" element={<ContactSales />} />
         <Route
           path="/careers"
           element={
