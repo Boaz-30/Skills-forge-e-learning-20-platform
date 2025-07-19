@@ -201,6 +201,16 @@ const faqs = [
     answer:
       "Absolutely! While yearly plans offer significant savings, monthly billing is available for all plans.",
   },
+  {
+    question: "What payment methods do you accept in Ghana?",
+    answer:
+      "We accept Mobile Money (MTN, Vodafone, AirtelTigo), bank transfers, and international cards. All prices are in Ghana Cedis (₵) for your convenience.",
+  },
+  {
+    question: "Do you offer payment plans for students?",
+    answer:
+      "Yes! We offer flexible payment plans for students with valid Ghanaian university enrollment. You can pay in installments with your student ID verification.",
+  },
 ];
 
 export default function Pricing() {
