@@ -236,6 +236,8 @@ const courseData: { [key: string]: any } = {
 export default function CourseContent() {
   const { courseId } = useParams();
   const navigate = useNavigate();
+  const { isLoaded, isSignedIn } = useAuth();
+  const { user } = useUser();
   const [currentLesson, setCurrentLesson] = useState<any>(null);
   const [isEnrolled, setIsEnrolled] = useState(false);
 
