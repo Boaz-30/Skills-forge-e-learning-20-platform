@@ -3,6 +3,7 @@ import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
+import Test from "./pages/Test";
 
 function App() {
   return (
