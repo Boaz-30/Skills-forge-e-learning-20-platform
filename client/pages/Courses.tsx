@@ -328,6 +328,8 @@ const mockUserEnrollments = [1, 3, 5]; // User is enrolled in courses 1, 3, and 
 
 export default function Courses() {
   const navigate = useNavigate();
+  const { isSignedIn } = useAuth();
+  const { user } = useUser();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [selectedLevel, setSelectedLevel] = useState("All Levels");
