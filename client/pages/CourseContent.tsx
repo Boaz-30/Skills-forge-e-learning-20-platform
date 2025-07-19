@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { useAuth, useUser } from "@clerk/clerk-react";
+import {
+  useAuth,
+  useUser,
+  SignInButton,
+  SignUpButton,
+} from "@clerk/clerk-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
