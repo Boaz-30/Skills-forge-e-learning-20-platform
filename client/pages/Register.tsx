@@ -232,7 +232,7 @@ export default function Register() {
                 onClick={() => handleSocialLogin("GitHub")}
               >
                 <Github className="w-4 h-4 mr-2" />
-                Sign up with GitHub
+                Sign In With GitHub
               </Button>
             </div>
 
