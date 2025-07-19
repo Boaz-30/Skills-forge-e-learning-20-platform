@@ -598,12 +598,11 @@ export default function Courses() {
                           </Button>
                         )
                       ) : (
-                        <Button
-                          className="brand-gradient"
-                          onClick={() => navigate("/sign-in")}
-                        >
-                          Sign In to Enroll
-                        </Button>
+                        <SignInButton mode="modal">
+                          <Button className="brand-gradient">
+                            Sign In to Enroll
+                          </Button>
+                        </SignInButton>
                       )}
                     </div>
                   </div>
