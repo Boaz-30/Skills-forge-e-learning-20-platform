@@ -37,8 +37,8 @@ const pricingPlans = [
     name: "Student",
     description: "Perfect for students and learners just getting started",
     icon: <GraduationCap className="w-6 h-6" />,
-    monthlyPrice: 29,
-    yearlyPrice: 290,
+    monthlyPrice: 350,
+    yearlyPrice: 3500,
     popular: false,
     features: [
       "Access to all course content",
@@ -57,7 +57,7 @@ const pricingPlans = [
     ],
     cta: "Start Learning",
     benefits: [
-      "Save 50% with student discount",
+      "Save 50% with student discount (Valid .edu.gh email required)",
       "Full access to learning materials",
       "Join a community of learners",
     ],
@@ -67,8 +67,8 @@ const pricingPlans = [
     name: "Individual",
     description: "Ideal for professionals advancing their careers",
     icon: <Briefcase className="w-6 h-6" />,
-    monthlyPrice: 79,
-    yearlyPrice: 790,
+    monthlyPrice: 950,
+    yearlyPrice: 9500,
     popular: true,
     features: [
       "Everything in Student plan",
@@ -98,8 +98,8 @@ const pricingPlans = [
     name: "Organization",
     description: "Comprehensive solution for teams and enterprises",
     icon: <Users className="w-6 h-6" />,
-    monthlyPrice: 199,
-    yearlyPrice: 1990,
+    monthlyPrice: 2400,
+    yearlyPrice: 24000,
     popular: false,
     features: [
       "Everything in Individual plan",
@@ -189,12 +189,12 @@ const faqs = [
   {
     question: "What's included in the student discount?",
     answer:
-      "Students get 50% off the Individual plan price. You'll need to verify your student status with a valid .edu email or student ID.",
+      "Students get 50% off the Individual plan price. You'll need to verify your student status with a valid .edu.gh email or Ghanaian student ID.",
   },
   {
     question: "Do you offer refunds?",
     answer:
-      "Yes, we offer a 30-day money-back guarantee on all plans. If you're not satisfied, we'll provide a full refund.",
+      "Yes, we offer a 30-day money-back guarantee on all plans. Refunds processed via Mobile Money or bank transfer within Ghana.",
   },
   {
     question: "Can I pay monthly instead of yearly?",
@@ -267,8 +267,8 @@ export default function Pricing() {
             <span className="brand-gradient-text">Learning Path</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Flexible pricing plans designed for every learner, from students to
-            enterprise teams
+            Affordable pricing plans designed for Ghanaian learners, from
+            students to enterprise teams. All payments in Ghana Cedis (₵).
           </p>
 
           {/* Billing Toggle */}
@@ -321,7 +321,7 @@ export default function Pricing() {
                   <div className="mt-6">
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold brand-gradient-text">
-                        $
+                        ₵
                         {isYearly
                           ? Math.round(plan.yearlyPrice / 12)
                           : plan.monthlyPrice}
@@ -330,7 +330,7 @@ export default function Pricing() {
                     </div>
                     {isYearly && (
                       <p className="text-sm text-muted-foreground mt-1">
-                        Billed yearly (${plan.yearlyPrice})
+                        Billed yearly (₵{plan.yearlyPrice})
                       </p>
                     )}
                     {plan.note && (
@@ -514,8 +514,7 @@ export default function Pricing() {
           </div>
 
           <p className="text-sm text-muted-foreground mt-4">
-            No credit card required • Cancel anytime • 30-day money-back
-            guarantee
+            Mobile Money accepted • Cancel anytime • 30-day money-back guarantee
           </p>
         </div>
       </section>
