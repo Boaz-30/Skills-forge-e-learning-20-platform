@@ -242,7 +242,15 @@ export default function CourseContent() {
   const [isEnrolled, setIsEnrolled] = useState(false);
 
   useEffect(() => {
-    // Check if user is enrolled in this course
+    // Wait for Clerk to load
+    if (!isLoaded) return;
+
+    // If user is not signed in, we'll show login requirement
+    if (!isSignedIn) {
+      return;
+    }
+
+    // Check if user is enrolled in this course (using userId for more realistic enrollment check)
     const enrolled = mockUserEnrollments.includes(Number(courseId));
     setIsEnrolled(enrolled);
 
@@ -256,7 +264,7 @@ export default function CourseContent() {
     if (course && course.modules[0] && course.modules[0].lessons[0]) {
       setCurrentLesson(course.modules[0].lessons[0]);
     }
-  }, [courseId]);
+  }, [courseId, isLoaded, isSignedIn]);
 
   if (!courseId || !courseData[courseId]) {
     return (
