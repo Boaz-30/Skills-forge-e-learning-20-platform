@@ -380,7 +380,7 @@ export default function Pricing() {
                     </div>
                   )}
 
-                  <Link to="/register" className="block">
+                  <Link to="/sign-up" className="block">
                     <Button
                       className={`w-full ${plan.popular ? "brand-gradient" : ""}`}
                       variant={plan.popular ? "default" : "outline"}
