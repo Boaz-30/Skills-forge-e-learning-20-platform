@@ -181,15 +181,25 @@ export default function Index() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <SignedOut>
+                <SignUpButton mode="modal">
+                  <Button size="lg" className="brand-gradient text-lg px-8">
+                    <Play className="w-5 h-5 mr-2" />
+                    Start Learning Today
+                  </Button>
+                </SignUpButton>
+              </SignedOut>
+              <SignedIn>
+                <Link to="/dashboard">
+                  <Button size="lg" className="brand-gradient text-lg px-8">
+                    <Play className="w-5 h-5 mr-2" />
+                    Continue Learning
+                  </Button>
+                </Link>
+              </SignedIn>
               <Link to="/courses">
-                <Button size="lg" className="brand-gradient text-lg px-8">
-                  <Play className="w-5 h-5 mr-2" />
-                  Start Learning
-                </Button>
-              </Link>
-              <Link to="/demo">
                 <Button size="lg" variant="outline" className="text-lg px-8">
-                  Watch Demo
+                  Browse Courses
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
@@ -310,13 +320,23 @@ export default function Index() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/register">
-              <Button size="lg" className="brand-gradient text-lg px-8">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                Start Free Trial
-              </Button>
-            </Link>
-            <Link to="/contact">
+            <SignedOut>
+              <SignUpButton mode="modal">
+                <Button size="lg" className="brand-gradient text-lg px-8">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  Start Free Trial
+                </Button>
+              </SignUpButton>
+            </SignedOut>
+            <SignedIn>
+              <Link to="/dashboard">
+                <Button size="lg" className="brand-gradient text-lg px-8">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  Go to Dashboard
+                </Button>
+              </Link>
+            </SignedIn>
+            <Link to="/contact-sales">
               <Button size="lg" variant="outline" className="text-lg px-8">
                 Contact Sales
               </Button>
