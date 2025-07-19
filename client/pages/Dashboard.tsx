@@ -108,6 +108,52 @@ const stats = [
 ];
 
 export default function Dashboard() {
+  const { isLoaded, isSignedIn } = useAuth();
+  const { user } = useUser();
+
+  // Show loading state while Clerk is loading
+  if (!isLoaded) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-8 h-8 brand-gradient rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span className="text-white font-bold text-lg">S</span>
+          </div>
+          <p className="text-muted-foreground">Loading your dashboard...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Redirect to sign in if not authenticated
+  if (!isSignedIn) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="max-w-md w-full text-center">
+          <div className="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 brand-gradient rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">S</span>
+            </div>
+          </div>
+          <h1 className="text-2xl font-bold mb-2">Access Restricted</h1>
+          <p className="text-muted-foreground mb-6">
+            Please sign in to access your learning dashboard.
+          </p>
+          <div className="space-y-2">
+            <Link to="/sign-in">
+              <Button className="w-full brand-gradient">Sign In</Button>
+            </Link>
+            <Link to="/">
+              <Button variant="outline" className="w-full">
+                Back to Home
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
