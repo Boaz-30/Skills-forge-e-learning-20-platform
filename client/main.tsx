@@ -22,7 +22,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <App />
       </ClerkProvider>
     ) : (
-      <App />
+      <>
+        <ClerkDevNotice />
+        <App />
+      </>
     )}
   </React.StrictMode>,
 );
