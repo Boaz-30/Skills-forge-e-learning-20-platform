@@ -284,12 +284,20 @@ export default function About() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Link to="/login">
-                <Button variant="ghost">Log In</Button>
-              </Link>
-              <Link to="/register">
-                <Button className="brand-gradient">Get Started</Button>
-              </Link>
+              <SignedOut>
+                <Link to="/sign-in">
+                  <Button variant="ghost">Log In</Button>
+                </Link>
+                <Link to="/sign-up">
+                  <Button className="brand-gradient">Get Started</Button>
+                </Link>
+              </SignedOut>
+              <SignedIn>
+                <Link to="/dashboard">
+                  <Button variant="ghost">Dashboard</Button>
+                </Link>
+                <UserButton afterSignOutUrl="/" />
+              </SignedIn>
             </div>
           </div>
         </div>
