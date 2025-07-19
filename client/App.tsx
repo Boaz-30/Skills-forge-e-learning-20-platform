@@ -3,8 +3,6 @@ import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import About from "./pages/About";
 import Pricing from "./pages/Pricing";
-import ClerkSignIn from "./pages/ClerkSignIn";
-import ClerkSignUp from "./pages/ClerkSignUp";
 import Dashboard from "./pages/Dashboard";
 import CourseContent from "./pages/CourseContent";
 import ContactSales from "./pages/ContactSales";
